@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap');
+
+
+html{
+    font-family: 'Ribeye Marrow', cursive;
+    font-style: ;
+    scroll-behavior: smooth;
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+/*Header section*/
+#header{
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;/*moves items to the center*/
+    height: auto;
+}
+#header .header{
+    height: 10vh;
+    background-color: #fd8079;
+}
+#header .brand{
+    color: ;
+    margin-left: 38px;
+}
+#header .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    padding: 0 20px;
+}
+#header .nav-list ul{
+    display: flex;
+    position: absolute;/*very important*/
+    background-color: black;
+    top: 0;
+    left: 100%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: .7s ease left;
+    
+}
+#header .nav-list ul.active{
+    left: 0;
+}
+#header .nav-list ul a{
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 500;
+    letter-spacing: .1rem;
+    color: bisque;
+    padding: 5px;
+    display: block;
+    
+}
+#header .nav-list ul a:hover{
+    color: #D46059;
+}
+
+
+#header .hamburger{
+    height: 60px;
+    width: 60px;
+    background-color: ;
+    position: relative;
+    display: inline-block;
+   /* border: 3px solid white;*/
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    transform: scale(.8);
+    margin: 20px;
+}
+#header .hamburger .bar{
+    height: 5px;
+    width: 48px;
+    border-radius: 20px;
+    position: absolute;
+    background-color: white;
+    z-index: -1;
+    transition: all .5s ease-in-out; /*For smooth transformation of the bars*/
+    margin-bottom: px;
+}
+#header .hamburger .bar::before,
+#header .hamburger .bar::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 20px;
+    left: 0;
+    background-color: white;
+    transition: all .5s ease-in-out; /*For smooth transformation of the bars*/
+    margin-top: px;
+
+}
+#header .hamburger .bar::after{
+    transform: translateY(-16px);
+   
+}
+#header .hamburger .bar::before{
+    transform: translateY(16px);
+    margin-top: px;
+}
+#header .hamburger.active .bar{
+    transform: translateX(-50px);
+    background: transparent;
+}
+#header .hamburger.active .bar::before{
+    transform: rotate(45deg) translate(35px,-35px);
+}
+#header .hamburger.active .bar::after{
+    transform: rotate(-45deg) translate(35px,35px);
+}
+
+
+/*End header section*/
+
+/*Media query for desktop*/
+@media only screen and (min-width: 1200px){
+    #header .hamburger{
+        display: none;
+    }
+    #header .nav-list ul{
+        position: initial;
+        display: block;
+        height: auto;
+        width: fit-content;
+        background-color: transparent;
+    }
+    #header .nav-list ul li{
+        display: inline-block;
+    }
+    #header .nav-list ul li a{
+        font-size: 1.2rem;
+        letter-spacing: 0;
+    }
+    #header .nav-list ul a:after{
+        display: none;
+    }
+    
+}
+/*End Media query*/
+
+#title{
+    background-color: #D46059;
+    background-image: url();
+    opacity: ;
+}
+#title h1{
+    font-size: 1.8rem;
+    color: white;
+    margin-top: 20px;
+    letter-spacing: .2rem;
+    max-width: 230px;
+    
+}
+#title h1:hover{
+    
+}
+#main{
+    background-image: url(file:///C:/Users/user/Desktop/Flowers/Flowers/S3.jpg);
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.7;
+    z-index: ;
+}
+#main h1{
+    color: white;
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    text-transform: ;
+    z-index: ;
+}
+#sunflower .sunflower{
+    height: 103vh;
+    background-color: orange;
+}
+
+#rose{
+    background-image: url(file:///C:/Users/user/Desktop/Flowers/Flowers/R1.jpg);
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.7;
+}
+#rose h1{
+    font-size: 2.4rem;
+    letter-spacing: .2rem;
+    color: beige;
+}
+#r .r{
+    height: 187vh;
+    background-color: mediumvioletred;
+    
+}
+#r .r-item{
+    margin-left: 14px;
+}
+#plumeria{
+    background-image: url(file:///C:/Users/user/Desktop/Flowers/Flowers/P3.jpg);
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.6;
+}
+#plumeria h1{
+    font-size: 2.4rem;
+    color: black;
+    letter-spacing: .1rem;
+}
+#plu .plu{
+    height: 170vh;
+    background-color: rgb(144, 144, 11);
+}
+#lotus{
+    background-image: url(file:///C:/Users/user/Desktop/Flowers/Flowers/L6.jpg);
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.8;
+}
+#lotus h1{
+    font-size: 2.8rem;
+    color: white;
+    letter-spacing: .1rem;
+}
+#L .L{
+    height: 136vh;
+    background-color: purple;
+}
+#dahlia{
+    background-image: url(file:///C:/Users/user/Desktop/Flowers/Flowers/Da5.jpg);
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.63;
+}
+#dahlia h1{
+    font-size: 2.6rem;
+    color: white;
+    letter-spacing: .2rem;
+}
+#da .da{
+    height: 170vh;
+    background-color: rgb(115, 140, 185);
+}
+#Lily{
+    background-image: url(file:///C:/Users/user/Desktop/Flowers/Flowers/Ly3.jpg);
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.7;
+}
+#Lily h1{
+    color: white;
+    font-size: 2.7rem;
+    letter-spacing: .1rem;
+}
+#Ly .Ly{
+    height: 170vh;
+    background-color: peru;
+}
+#marigold{
+    background-image: url(file:///C:/Users/user/Desktop/Flowers/Flowers/M6.jpg);
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.8;
+}
+#marigold h1{
+    color: white;
+    font-size: 2.3rem;
+    letter-spacing: .1rem;
+}
+#m .m{
+    height: 170vh;
+    background-color: rgb(169, 150, 150);
+}
+#daisy{
+    background-image: url(file:///C:/Users/user/Desktop/Flowers/Flowers/D4.jpg);
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.8;
+}
+#daisy h1{
+    color: white;
+    letter-spacing: .1rem;
+    font-size: 2.8rem;
+}
+#d .d{
+    height: 171vh;
+    background-color: rgb(208, 208, 6);
+}
+#hibiscus{
+    background-image: url(file:///C:/Users/user/Desktop/Flowers/Flowers/H1.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+}
+#hibiscus h1{
+    color: white;
+    font-size: 2.5rem;
+    letter-spacing: .1rem;
+}
+#h .h{
+    height: 136vh;
+    background-color: rgb(214, 144, 214);
+}
+#jasmine{
+     background-image: url(file:///C:/Users/user/Desktop/Flowers/Flowers/J6.jpg);
+     background-size: cover;
+     background-position: top center;
+     opacity: 0.7;
+}
+#jasmine h1{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: ;
+    letter-spacing: .2rem;
+}
+#j .j{
+    height: 136vh;
+    background-color: rgb(12, 199, 199);
+}
+#tulip{
+    background-image: url(file:///C:/Users/user/Desktop/Flowers/Flowers/T2.jpg);
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.8;
+}
+#tulip h1{
+    color: rgb(231, 216, 216);
+    font-size: 2.8rem;
+    letter-spacing: .2rem;
+}
+#t .t{
+    height: 137vh;
+    background-color: limegreen;
+}
+
+/*Desktop view*/
+@media only screen and (min-width: 1200px){
+    #sunflower .sunflower{
+        height: 180vh;
+        padding-bottom: px;
+    }
+    #sunflower .sunflower-item{
+        margin-right: 20px;
+        height: 300px;
+        width: 380px;
+    }
+    #sunflower .sunflower-items{
+        display: flex;
+        margin-bottom: 630px;
+        padding-bottom: px;
+    }
+    #rose .rose{
+        height: vh;
+    }
+    #r .r{
+        height: 250vh;
+    }
+    #r .r-items{
+        display: flex;
+        margin-bottom: 1260px;
+        
+    }
+    #plu .plu{
+        height: 240vh;
+    }
+    #plu .p-items{
+        display: flex;
+        margin-bottom: 1200px;
+    }
+    #L .L{
+        height: 190vh;
+    }
+    #L .L-items{
+        display: flex;
+        margin-bottom: 900px;
+    }
+    #da .da{
+        height: 230vh;
+    }
+    #da .da-items{
+        display: flex;
+        margin-bottom: 1170px;
+    }
+    #Ly .Ly{
+        height: 230vh;
+    }
+    #Ly .Ly-items{
+        display: flex;
+        margin-bottom: 1160px;
+    }
+    #m .m{
+        height: 230vh;
+    }
+    #m .m-items{
+        display: flex;
+        margin-bottom: 1160px;
+    }
+    #d .d{
+        height: 230vh;
+    }
+    #d .d-items{
+        display: flex;
+        margin-bottom: 1180px;
+    }
+    #h .h{
+        height: 180vh;
+    }
+    #h .h-items{
+        display: flex;
+        margin-bottom: 870px;
+    }
+    #j .j{
+        height: 180vh;
+    }
+    #j .j-items{
+        display: flex;
+        margin-bottom: 890px;
+    }
+    #tulip h1{
+        color: black;
+    }
+    #t .t{
+        height: 180vh;
+    }
+    #t .t-items{
+        display: flex;
+        margin-bottom: 870px;
+        padding-bottom: px;
+    }
+}
